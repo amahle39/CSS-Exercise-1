@@ -1,0 +1,93 @@
+/*General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/*Layout-Flexbox, 3 cards per row,responsive */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Cards - 300px wide */
+.card {
+    width: 300px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0.0,0.1);
+   border-radius: 8px;
+text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+
+}
+.card h3{
+    margin: 10px 0 5px;
+}
+
+.price{
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+/* Button styling - Exact from brief */
+.card button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effects + Transitions */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    
+}
+
+.card button:hover{
+    background-color: #0056b3
+}
+
+.card button:hover {
+       background-color: #45a049;
+}
+
+/* Tablet: 2 cards per row (max-width:768px) */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50%-20px);
+    }
+}
+
+/* Mobile: 1 card per row (max-width: 480px) */
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
